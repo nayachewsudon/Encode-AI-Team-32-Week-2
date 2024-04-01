@@ -20,7 +20,7 @@ export async function POST(req: Request) {
         content:
           `You are a professional comedian who has been hired to write a series of jokes. Just answer with the joke you were asked to return`,
       },
-      ...messages.additionalMessages,
+      //...messages.additionalMessages,
         {
           role: "system",
           content:
