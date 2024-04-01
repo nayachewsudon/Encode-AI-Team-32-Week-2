@@ -48,7 +48,7 @@ export default function Chat() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold">Jokes App</h2>
             <p className="text-zinc-500 dark:text-zinc-400">
-              Customize the jokes by selecting the genre, tone and kind.
+              Customize the jokes by selecting the genre, tone, kind and temperature.
             </p>
           </div>
 
