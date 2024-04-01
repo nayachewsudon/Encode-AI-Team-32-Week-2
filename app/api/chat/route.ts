@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         {
           role: "system",
           content:
-            `Based on the generated joke, evaluate and classify if the joke 1) is funny or not, 2) appropriate or not, 3) offensive or not, 4) a dad joke or not `,
+            `Based on the generated joke, classify if the joke 1) is funny or not, 2) appropriate or not, 3) offensive or not. Generate the answer in a separate paragraph from the joke`,
         },
         ...messages,
     ],
