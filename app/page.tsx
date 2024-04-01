@@ -29,7 +29,7 @@ export default function Chat() {
     genre: "",
     tone: "",
     kind: "",
-    temperature: "",
+    temperature: "0",
   }); 
 
   const handleChange = ({
@@ -123,14 +123,29 @@ export default function Chat() {
               ))}
             </div>
           </div>
+          <div className="space-y-4 bg-opacity-25 bg-gray-700 rounded-lg p-4">
+            <h3 className="text-xl font-semibold">Tempreature</h3>
+
+            <div className="flex flex-wrap justify-center">
+              <input
+                type="number"
+                min="0"
+                max="100"
+                step={1}
+                name="tempreature"
+                onChange={handleChange}
+                className="temperature"
+              />
+            </div>
+          </div>
 
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
-            disabled={isLoading || (!state.genre || !state.tone || !state.kind)}
+            disabled={isLoading || (!state.genre || !state.tone || !state.kind || !state.temperature)}
             onClick={() =>
               append({
                 role: "user",
-                content: `Generate a ${state.genre} joke, the kind of joke you will generate is: ${state.kind}. The tone used must be: ${state.tone}`,
+                content: `Generate a ${state.genre} joke, the kind of joke you will generate is: ${state.kind}. The tone used must be: ${state.tone}. Finally, the temperature of the joke must be: ${state.temperature}`,
               })
             }
           >

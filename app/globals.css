@@ -26,6 +26,11 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+input.temperature { /* csslint allow: adjoining-classes */
+  color: #000;
+  text-align: right;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
